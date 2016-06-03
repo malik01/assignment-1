@@ -12,6 +12,8 @@ namespace Assignment_1
         {
             hero hero1 = new hero("thomas");
             hero1.show();
+            
+            hero1.Fight();
         }
     }
 }

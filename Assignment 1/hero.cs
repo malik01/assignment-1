@@ -17,6 +17,7 @@ namespace Assignment_1
         private int _health;
         private string _name;
         // public property
+        Random randomInt = new Random();
         public string Name
         {
             get { return this._name; }
@@ -32,9 +33,14 @@ namespace Assignment_1
             this.Name = name;
             
         }
-        public static void Fight()
+        public void Fight()
         {
-             
+            
+            if (_hitAttempt() == true)
+            {
+                Console.WriteLine("\n{0} Landed a hit with a damage of {1}" ,Name,_hitDamage());
+            }
+              
         }
         public void show()
         {
@@ -42,19 +48,30 @@ namespace Assignment_1
         }
         private void _generateAbilities()
         {
-            Random randomInt = new Random();
+            
             _strength = randomInt.Next(1,100);
             _speed = randomInt.Next(1,100);
             _health = randomInt.Next(1,100);
             Console.WriteLine("your hero has been created with strength {0},speed {1} and a health of {2}",_strength,_speed,_health);
         }
-        private bool _hitAttempt()
+        public bool _hitAttempt()
         {
-            return true;
+            bool attempt = false;
+            int attp;
+            attp = randomInt.Next(4);
+            if (attp==0)
+            {
+                attempt=true;
+            }
+            return attempt;
         } 
         private int _hitDamage()
         {
-            return 1;
+                int multiplier;
+                int damage;
+                multiplier = randomInt.Next(1, 6);
+                damage = multiplier * _strength;
+                return damage;
         }
     }
 }
