@@ -10,6 +10,8 @@ namespace Assignment_1
     {
         static void Main(string[] args)
         {
+            hero hero1 = new hero("thomas");
+            hero1.show();
         }
     }
 }
