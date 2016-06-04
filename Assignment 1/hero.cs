@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * student id 300852792 
  * Date created 5/3/2016
  * Date modified 6/3/2016
- * version 1.1
+ * version 1.2 added final comments
  */
 namespace Assignment_1
 {
