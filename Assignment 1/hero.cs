@@ -28,6 +28,7 @@ namespace Assignment_1
         private int _speed;
         private int _health;
         private string _name;
+        // using random number method to generate random numbers
         Random randomInt = new Random();
         /**
       * <summary>
